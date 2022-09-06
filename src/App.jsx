@@ -3,12 +3,13 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import searchIcon from './assets/search.svg'
 import userImage from './assets/user.png'
+import Spinner from './components/Spinner'
 
 function App() {
   const [count, setCount] = useState(0)
   const [search, setSearch] = useState('')
   const [users, setUsers] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const handleSearch = async (param) => {
     const response = await fetch(`https://my-json-server.typicode.com/glendmaatita/userjsondemo/db?q=${param}`)
@@ -27,8 +28,10 @@ function App() {
       const data = await response.json()
       if (data) {
         setUsers(data.data)
+        setLoading(false)
       } else {
         setUsers([])
+        setLoading(false)
       }
     } catch (error) {
       console.log(error)
@@ -74,7 +77,7 @@ function App() {
               {
                 loading ? (
                   <div className="flex justify-center items-center w-full">
-                    <div className="loader"></div>
+                    <Spinner />
                   </div>
                 ) : (
                   users && users.length > 0 ? (
