@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+html,
+body {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  background-color: #f8f8fa;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.nav-input,
+.nav-input-group .btn-nav-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 14px 24px 14px;
+}
+@media (min-width: 768px) {
+  .nav {
+    flex-wrap: nowrap;
+  }
+}
+
+.nav-title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #121f3e;
+}
+.nav-input-container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .nav-input-container {
+    width: auto;
+  }
+}
+.nav-input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 46px;
+  padding: 0 18px;
+  width: 100%;
+  background: #fff;
+  border-radius: 100px;
+}
+.nav-input-group .btn-nav-input {
+  width: auto;
+}
+@media (min-width: 768px) {
+  .nav-input-group {
+    width: 400px !important;
+  }
+}
+@media (min-width: 992px) {
+  .nav-input-group {
+    width: 400px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-input-group {
+    width: 500px;
+  }
+}
+.nav-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #abb3c4;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .nav-input {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.content {
+  padding: 10px 14px 24px 14px;
+}
+
+.user-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  background: #fff;
+  border-radius: 26px;
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+.user-img {
+  width: 70px;
+  height: 70px;
+}
+.user-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height */
+  text-align: center;
+  color: #121f3e;
+}
+.user-role {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #abb3c4;
+}
+.user-status > * {
+  margin: 0 2px;
+}
+.user-status.verified {
+  color: #2ed16c;
+}
+
+.user-status span,
+.user-status a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+.user-status-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
